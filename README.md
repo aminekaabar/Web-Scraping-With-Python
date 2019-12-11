@@ -11,7 +11,9 @@ You can then write a python script to automatically control browser interactions
 1- run command: pip install selenium
 2- Download & install the browser driver to simulate browser sessions: 
 
-   For Chrome: https://sites.google.com/a/chromium.org/chromedriver/
+   For Chrome: https://sites.google.com/a/chromium.org/chromedriver
+   
+   
    For Firefox: https://www.guru99.com/gecko-marionette-driver-selenium.html
 
 # Enjoy !
