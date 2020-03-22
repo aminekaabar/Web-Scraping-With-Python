@@ -1,5 +1,5 @@
 from selenium.webdriver import Chrome
-
+import pandas as pd
 webdriver = r"c:\Users\..." # put your browser driver's path
 
 driver = Chrome(webdriver)
