@@ -1,12 +1,9 @@
 from selenium.webdriver import Chrome
 import pandas as pd
-webdriver = r"c:\Users\..." # put your browser driver's path
-
+webdriver = r"c:\Users\..." ### put your browser driver's path
 driver = Chrome(webdriver)
-
-driver.get("https://www.itftennis.com/en/tournament-calendar/mens-world-tennis-tour-calendar?startDate=2019-12") # here the website url
-items = len(driver.find_elements_by_class_name("whatson-table__tournament")) # here you put the class name of the HTML element which contains the data to scrap
-
+driver.get("https://www.itftennis.com/en/tournament-calendar/mens-world-tennis-tour-calendar?startDate=2019-12") ### here the website url
+items = len(driver.find_elements_by_class_name("whatson-table__tournament")) ### here you put the class name of the HTML element which contains the data to scrap
 total = []
 for item in range(items):
         items = driver.find_elements_by_class_name("whatson-table__tournament")
@@ -22,5 +19,5 @@ for item in range(items):
             new = ((t_name, t_date, t_hostname, t_location, t_category,t_prize_money,t_surface,t_status))
             total.append(new)
 df = pd.DataFrame(total, columns=['Name', 'Date', 'Hostname','Location','Category','Prize Money','Surface','Status'])
-df.to_csv('itf_tournaments.csv')
+df.to_csv('itf_tournaments.csv') ### the generated csv file
 driver.close()
